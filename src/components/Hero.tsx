@@ -128,7 +128,7 @@ const Hero = () => {
         </motion.div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .group:hover {
           filter: grayscale(0%) brightness(1);
         }
