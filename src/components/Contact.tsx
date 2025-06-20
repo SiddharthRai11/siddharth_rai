@@ -1,7 +1,11 @@
 //import React from 'react';
 import { motion } from 'framer-motion';
 import { useForm } from 'react-hook-form';
-import { FaGithub, FaLinkedin, FaTwitter, FaPaperPlane } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+//import AnimatedSubmitButton from "../components/AnimatedSubmitButton";
+import LottieSubmitButton from "../components/LottieSubmitButton";
+
+
 
 type FormData = {
   name: string;
@@ -23,8 +27,8 @@ const Contact = () => {
   };
 
   return (
-    <section 
-      id="contact" 
+    <section
+      id="contact"
       className="section-padding bg-[#0d1117] relative overflow-hidden"
       style={{
         filter: 'grayscale(10%) brightness(0.98)',
@@ -33,14 +37,14 @@ const Contact = () => {
     >
       {/* Blue glow effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.15 }}
           transition={{ duration: 1.5 }}
           className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-blue-600 
                     blur-[100px] mix-blend-screen"
         />
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}
           transition={{ duration: 1.5, delay: 0.3 }}
@@ -59,7 +63,7 @@ const Contact = () => {
           <h2 className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
             Contact Me
           </h2>
-          
+
           <div className="grid md:grid-cols-2 gap-12">
             {/* Contact Info */}
             <motion.div
@@ -72,9 +76,9 @@ const Contact = () => {
                 I'm always open to discussing new projects, creative ideas, or
                 opportunities to be part of your visions.
               </p>
-              
+
               <div className="space-y-4">
-                <motion.div 
+                <motion.div
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4"
                 >
@@ -90,8 +94,8 @@ const Contact = () => {
                     github.com/yourusername
                   </a>
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4"
                 >
@@ -107,8 +111,8 @@ const Contact = () => {
                     linkedin.com/in/yourusername
                   </a>
                 </motion.div>
-                
-                <motion.div 
+
+                <motion.div
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4"
                 >
@@ -128,8 +132,8 @@ const Contact = () => {
             </motion.div>
 
             {/* Contact Form */}
-            <motion.form 
-              onSubmit={handleSubmit(onSubmit)} 
+            <motion.form
+              onSubmit={handleSubmit(onSubmit)}
               className="space-y-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -155,7 +159,7 @@ const Contact = () => {
                   <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
                 )}
               </div>
-              
+
               <div>
                 <label
                   htmlFor="email"
@@ -182,7 +186,7 @@ const Contact = () => {
                   <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
                 )}
               </div>
-              
+
               <div>
                 <label
                   htmlFor="message"
@@ -203,19 +207,9 @@ const Contact = () => {
                   <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>
                 )}
               </div>
-              
-              <motion.button
-                type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="w-full px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 
-                          text-white font-medium rounded-lg hover:shadow-lg 
-                          hover:shadow-blue-500/30 transition-all duration-300 
-                          flex items-center justify-center gap-2"
-              >
-                <FaPaperPlane />
-                Send Message
-              </motion.button>
+              <div className="flex flex-col items-end">
+                <LottieSubmitButton />
+              </div>
             </motion.form>
           </div>
         </motion.div>
