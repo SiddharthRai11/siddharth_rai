@@ -8,7 +8,7 @@
   }
   
   body {
-    @apply bg-dark text-text;
+    @apply bg-dark text-text font-sans;
   }
 }
 
