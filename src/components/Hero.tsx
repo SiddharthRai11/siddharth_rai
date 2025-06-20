@@ -36,7 +36,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-200">
+          <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-200 pt-20">
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">SIDDHARTH RAI</span>
           </h1>
           <motion.h2 
@@ -107,7 +107,7 @@ const Hero = () => {
               }}
             />
             <img
-              src="src\profile.jpeg"
+              src="/profile.jpeg"
               alt="Profile"
               className="relative w-full h-full object-cover rounded-full border-4 border-[#0d1117]
                         shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300"

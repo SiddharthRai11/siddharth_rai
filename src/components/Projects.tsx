@@ -4,13 +4,13 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
+    title: 'Quick-Chat',
     description:
-      'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
-    image: '/projects/ecommerce.jpg',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    github: 'https://github.com/yourusername/ecommerce',
-    live: 'https://ecommerce-demo.com',
+      'A real-time chat application built using Socket.IO and React, enabling users to send and receive messages instantly. Features include live messaging, user presence status, and a responsive UI for seamless communication across devices',
+    image: '/Screenshot 2025-06-20 122334.png',
+    technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io'],
+    github: 'https://github.com/SiddharthRai11/chat_app',
+    live: 'https://chat-app-tau-blush.vercel.app/login',
   },
   {
     title: 'Task Management App',
@@ -19,7 +19,7 @@ const projects = [
     image: '/projects/taskmanager.jpg',
     technologies: ['React', 'Firebase', 'Tailwind CSS'],
     github: 'https://github.com/yourusername/taskmanager',
-    live: 'https://taskmanager-demo.com',
+    live: 'https://chat-app-tau-blush.vercel.app/login',
   },
   {
     title: 'AI Chat Application',

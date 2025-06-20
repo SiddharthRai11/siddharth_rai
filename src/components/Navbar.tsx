@@ -23,7 +23,7 @@ const Navbar = () => {
             smooth={true}
             duration={500}
           >
-            Portfolio
+            <img src='/portfolio.png' className='w-8 h-8'></img>
           </Link>
 
           {/* Desktop Navigation */}
