@@ -1,8 +1,6 @@
-//import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-
-
+import SpotlightCard from './Spotlightcard';
 
 const projects = [
   {
@@ -36,27 +34,43 @@ const projects = [
 
 const Projects = () => {
   return (
-    
-   //<section id="projects" className="section-padding bg-sky-50 text-gray-800">
-   //<section id="projects" className="section-padding bg-blue-100 text-gray-800">
-   //<section id="projects" className="section-padding bg-[#e6f0ff] text-gray-800">
-   // <section id="projects" className="section-padding bg-[#c7ddff] text-gray-800">
-   <section id="projects" className="section-padding bg-blue-50 text-gray-800 ">
-    
+    <section
+      id="projects"
+      className="section-padding bg-[#0d1117] text-gray-200 relative overflow-hidden"
+      style={{
+        filter: 'grayscale(10%) brightness(0.98)',
+        transition: 'filter 0.5s ease',
+      }}
+    >
+      {/* Blue glow effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.15 }}
+          transition={{ duration: 1.5 }}
+          className="absolute top-1/3 left-1/4 w-64 h-64 rounded-full bg-blue-600 
+                     blur-[100px] mix-blend-screen"
+        />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.1 }}
+          transition={{ duration: 1.5, delay: 0.3 }}
+          className="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-cyan-500 
+                     blur-[100px] mix-blend-screen"
+        />
+      </div>
 
-
-      <div className="container-padding mx-auto">
-       
-        
+      <div className="container-padding mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-600">
+          <h2 className="text-4xl font-bold mb-12 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
             Projects
           </h2>
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
@@ -65,47 +79,52 @@ const Projects = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-blue-100"
               >
-                <div className="relative h-48">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-10 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-700 hover:text-blue-500 transition-colors duration-300"
-                    >
-                      <FaGithub className="w-7 h-7" />
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-700 hover:text-cyan-500 transition-colors duration-300"
-                    >
-                      <FaExternalLinkAlt className="w-7 h-7" />
-                    </a>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-2 text-blue-700">{project.title}</h3>
-                  <p className="text-gray-700 mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+                  <SpotlightCard className="bg-[#161B22] p-0 border border-blue-900/30">
+    <div className="rounded-xl overflow-hidden">
+      <div className="relative h-48">
+        <img
+          src={project.image}
+          alt={project.title}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-10 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-400 hover:text-blue-500 transition-colors duration-300"
+          >
+            <FaGithub className="w-7 h-7" />
+          </a>
+          <a
+            href={project.live}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cyan-400 hover:text-cyan-500 transition-colors duration-300"
+          >
+            <FaExternalLinkAlt className="w-7 h-7" />
+          </a>
+        </div>
+      </div>
+      <div className="p-6">
+        <h3 className="text-xl font-semibold mb-2 text-blue-400">
+          {project.title}
+        </h3>
+        <p className="text-gray-400 mb-4">{project.description}</p>
+        <div className="flex flex-wrap gap-2">
+          {project.technologies.map((tech) => (
+            <span
+              key={tech}
+              className="px-3 py-1 bg-blue-900/20 text-blue-300 rounded-full text-sm"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </SpotlightCard>
               </motion.div>
             ))}
           </div>
