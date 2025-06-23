@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 
+
 const projects = [
   {
     title: 'Quick-Chat',

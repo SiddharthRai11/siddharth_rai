@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
+import Waves from './Waves';
 
 
 const Hero = () => {
@@ -14,7 +15,8 @@ const Hero = () => {
       }}
     >
       {/* Blue glow effects */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden z-0">
+        <Waves/>
         
         
         <motion.div
