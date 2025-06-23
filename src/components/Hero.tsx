@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 
+
 const Hero = () => {
   return (
-    <section 
-      id="home" 
+    <section
+      id="home"
       className="min-h-screen flex items-center justify-center bg-[#0d1117] 
                 relative overflow-hidden group"
       style={{
@@ -14,14 +15,16 @@ const Hero = () => {
     >
       {/* Blue glow effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <motion.div 
+        
+        
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.25 }}
           transition={{ duration: 1.5 }}
           className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-600 
                     blur-[100px] mix-blend-screen"
         />
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.15 }}
           transition={{ duration: 1.5, delay: 0.3 }}
@@ -39,7 +42,7 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold mb-4 text-gray-200 pt-20">
             Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">SIDDHARTH RAI</span>
           </h1>
-          <motion.h2 
+          <motion.h2
             className="text-xl md:text-2xl text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300 mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -47,7 +50,7 @@ const Hero = () => {
           >
             Full Stack Developer
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-lg text-gray-400 max-w-2xl mx-auto mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.8 }}
@@ -56,7 +59,7 @@ const Hero = () => {
             I build exceptional digital experiences that make an impact.
             Specializing in beautiful, functional, and user-centered solutions.
           </motion.p>
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -91,10 +94,10 @@ const Hero = () => {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-16"
+          className="mt-8 sm:mt-16"
         >
           <div className="relative w-64 h-64 mx-auto">
-            <motion.div 
+            <motion.div
               className="absolute inset-0 bg-blue-600 rounded-full opacity-20"
               animate={{
                 scale: [1, 1.1, 1],
@@ -112,7 +115,7 @@ const Hero = () => {
               className="relative w-full h-full object-cover rounded-full border-4 border-[#0d1117]
                         shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300"
             />
-            <motion.div 
+            <motion.div
               className="absolute inset-0 rounded-full border-2 border-blue-400/30 pointer-events-none"
               animate={{
                 scale: [1, 1.05, 1],

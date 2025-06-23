@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
+
 const projects = [
   {
     title: 'Quick-Chat',
@@ -39,10 +40,13 @@ const Projects = () => {
    //<section id="projects" className="section-padding bg-blue-100 text-gray-800">
    //<section id="projects" className="section-padding bg-[#e6f0ff] text-gray-800">
    // <section id="projects" className="section-padding bg-[#c7ddff] text-gray-800">
-   <section id="projects" className="section-padding bg-blue-50 text-gray-800">
+   <section id="projects" className="section-padding bg-blue-50 text-gray-800 ">
+    
 
 
       <div className="container-padding mx-auto">
+       
+        
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
